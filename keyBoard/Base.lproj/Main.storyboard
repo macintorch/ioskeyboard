@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9L-O0-gJ4">
-                                <rect key="frame" x="30" y="285" width="70" height="40"/>
+                                <rect key="frame" x="30" y="249" width="70" height="40"/>
                                 <state key="normal" title="Say Hello"/>
                                 <connections>
                                     <action selector="sayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnj-B2-wyV"/>
@@ -27,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello. What is your name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3N-bE-iPc">
                                 <rect key="frame" x="0.0" y="69" width="333" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="loM-Ix-9Zc">
@@ -40,6 +40,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-zX-vRQ">
+                                <rect key="frame" x="114" y="259" width="74" height="30"/>
+                                <state key="normal" title="Name First"/>
+                                <connections>
+                                    <action selector="nameFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U88-yb-jjB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apO-8v-0xt">
+                                <rect key="frame" x="202" y="259" width="61" height="30"/>
+                                <state key="normal" title="City First"/>
+                                <connections>
+                                    <action selector="cityFirst:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAT-bn-07M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEk-6w-dRq">
+                                <rect key="frame" x="92" y="297" width="91" height="30"/>
+                                <state key="normal" title="Name Resign"/>
+                                <connections>
+                                    <action selector="nameResign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTA-gN-0PQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjR-5f-El1">
+                                <rect key="frame" x="201" y="297" width="78" height="30"/>
+                                <state key="normal" title="City Resign"/>
+                                <connections>
+                                    <action selector="cityResign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dL-fw-bKF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

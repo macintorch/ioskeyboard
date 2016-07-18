@@ -18,11 +18,19 @@ class HelloViewController: UIViewController {
     
     @IBOutlet weak var helloButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
+    
+    func becomeFirstResponder(nameTextField: UITextField) -> Bool {
+        cityTextField.becomeFirstResponder()
+        return true
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,8 +55,33 @@ class HelloViewController: UIViewController {
         
             self.textLabel.text = "Hello \(name) from \(city)"
         
+        if nameTextField.isFirstResponder() {
+            nameTextField.resignFirstResponder()
+        }
         
+        if cityTextField.isFirstResponder() {
+            cityTextField.resignFirstResponder()
+        }
         
     }
     
+    
+    @IBAction func nameFirst(sender: AnyObject) {
+        
+        self.nameTextField.becomeFirstResponder()
+    }
+    
+    
+    @IBAction func cityFirst(sender: AnyObject) {
+        self.cityTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func nameResign(sender: AnyObject) {
+        self.nameTextField.resignFirstResponder()
+    }
+    
+    @IBAction func cityResign(sender: AnyObject) {
+        self.cityTextField.resignFirstResponder()
+    }
+   
 }
