@@ -21,6 +21,8 @@ class HelloViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.cityTextField.delegate = self
 
         // Do any additional setup after loading the view.
         
@@ -84,4 +86,20 @@ class HelloViewController: UIViewController {
         self.cityTextField.resignFirstResponder()
     }
    
+}
+
+// use extension for code organization
+
+extension HelloViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //do something
+        
+        if textField == nameTextField {
+            self.cityTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }
