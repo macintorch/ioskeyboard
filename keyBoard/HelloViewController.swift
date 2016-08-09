@@ -23,9 +23,17 @@ class HelloViewController: UIViewController {
         super.viewDidLoad()
         
         self.cityTextField.delegate = self
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
         
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func becomeFirstResponder(nameTextField: UITextField) -> Bool {
@@ -86,6 +94,9 @@ class HelloViewController: UIViewController {
         self.cityTextField.resignFirstResponder()
     }
    
+    @IBAction func lostFocus(sender: AnyObject) {
+        self.cityTextField.resignFirstResponder()
+    }
 }
 
 // use extension for code organization
